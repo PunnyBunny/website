@@ -91,7 +91,6 @@ video {
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
 }
 
@@ -169,25 +168,22 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
+    font-family: "Gideon Roman", serif;
+    font-size: 10pt;
+    line-height: 1.85em;
+    font-weight: 500;
+    font-style: normal;
 }
 
 body {
     background: #D4D9DD url("images/bg03.jpg");
     color: #474f51;
-    font-size: 10pt;
-    font-family: monospace;
-    line-height: 1.85em;
-    font-weight: 300;
 }
 
 input,
 textarea,
 select {
     color: #474f51;
-    font-size: 10pt;
-    font-family: monospace;
-    line-height: 1.85em;
-    font-weight: 300;
 }
 
 ul,
