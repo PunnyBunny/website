@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<!--
+	Halcyonic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+
+<body class="subpage">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <%- include('partials/_header') %>
+
+        <!-- Content -->
+        <section id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-12-medium">
+
+                        <!-- Sidebar -->
+                        <section>
+                            <header>
+                                <h2>Search</h2>
+                                <input type="text" id="searchBar" placeholder="Search for projects..."
+                                    onkeyup="filterContent()">
+                            </header>
+
+                            <h2>Categories</h2>
+                            <ul class="link-list">
+                                <li><a href="#">Nuclear Fusion</a></li>
+                                <li><a href="#">Programming</a></li>
+                                <li><a href="#">Travelling</a></li>
+                                <li><a href="#">Euro Truck Simulator</a></li>
+                                <li><a href="#">Cooking</a></li>
+                                <li><a href="#">Web Development</a></li>
+                            </ul>
+                        </section>
+
+                    </div>
+                    <div class="col-9 col-12-medium imp-medium" id="main-content">
+                        <% sections.forEach((section, index)=> { %>
+                            <section>
+                                <header>
+                                    <h2><a href="/section/<%= index %>">
+                                            <%= section.title %>
+                                        </a></h2>
+                                </header>
+                                <p>
+                                    <%= section.content %>
+                                </p>
+                            </section>
+                            <% }); %>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <%- include('partials/_footer') %>
+
+        <!-- Copyright -->
+        <div id="copyright">
+            &copy; Untitled. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script>
+        function filterContent() {
+            const input = document.getElementById('searchBar').value.toLowerCase();
+            const sections = document.querySelectorAll('#main-content section');
+
+            sections.forEach(section => {
+                const title = section.querySelector('h2').textContent.toLowerCase();
+                if (title.includes(input)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
