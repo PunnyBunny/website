@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        <%= section.title %>
+    </title>
+</head>
+
+<body>
+    <!-- Header -->
+    <%- include('partials/_header') %>
+
+    <!-- Content -->
+    <section>
+        <header>
+            <h2>
+                <%= section.title %>
+            </h2>
+        </header>
+        <p>
+            <%= section.content %>
+        </p>
+    </section>
+    <a href="/">Back to main content</a>
+
+    <!-- Scripts -->
+    <script src="public/assets/js/jquery.min.js"></script>
+    <script src="public/assets/js/browser.min.js"></script>
+    <script src="public/assets/js/breakpoints.min.js"></script>
+    <script src="public/assets/js/util.js"></script>
+    <script src="public/assets/js/main.js"></script>
+</body>
+
+</html>
