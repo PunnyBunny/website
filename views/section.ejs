@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
@@ -9,7 +9,9 @@
 
 <body>
     <!-- Header -->
-    <%- include('partials/_header') %>
+    <section id="header">
+        <%- include('partials/_header') %>
+    </section>
 
     <!-- Content -->
     <section>
@@ -24,12 +26,15 @@
     </section>
     <a href="/">Back to main content</a>
 
+    <!-- Footer -->
+    <%- include('partials/_footer') %>
+
     <!-- Scripts -->
-    <script src="public/assets/js/jquery.min.js"></script>
-    <script src="public/assets/js/browser.min.js"></script>
-    <script src="public/assets/js/breakpoints.min.js"></script>
-    <script src="public/assets/js/util.js"></script>
-    <script src="public/assets/js/main.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

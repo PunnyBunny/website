@@ -20,6 +20,10 @@ app.set('view engine', 'ejs');
 // Set the directory for the views
 app.set('views', path.join(__dirname, 'views'));
 
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/section', express.static(path.join(__dirname, 'public')));
+
 app.get('/', (req, res) => {
     res.render('index');
 });
@@ -34,14 +38,10 @@ app.get('/projects', (req, res) => {
 
 // Define a route for each section based on its ID
 app.get('/section/:id', (req, res) => {
-    // Get the section based on the ID from the URL parameter
     const section = sections[req.params.id];
-    // Render the section.ejs template and pass the section object to it
     res.render('section', { section });
 });
 
-// Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, 'public')));
 
 // Define the port to listen on
 const PORT = process.env.PORT || 3000;
