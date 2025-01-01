@@ -170,8 +170,6 @@ html {
     box-sizing: inherit;
     font-family: "Gideon Roman", serif;
     font-size: 10pt;
-    line-height: 1.85em;
-    font-weight: 500;
     font-style: normal;
 }
 
@@ -1603,9 +1601,6 @@ section:last-child,
 #header {
     position: relative;
     background: #3B4346 url("images/dark_grey_wall_texture.png");
-    border-bottom: solid 1px #272d30;
-    box-shadow: inset 0px -1px 0px 0px #51575a;
-    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.75);
 }
 
 #header>.container {
